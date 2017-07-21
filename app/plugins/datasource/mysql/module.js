@@ -1,4 +1,4 @@
-/*! grafana - v5.0.0-pre1 - 2017-07-13
+/*! grafana - v5.0.0-pre1 - 2017-07-21
  * Copyright (c) 2017 Torkel Ödegaard; Licensed Apache-2.0 */
 
 System.register(["./datasource","./query_ctrl"],function(a,b){"use strict";var c,d,e,f,g;b&&b.id;return{setters:[function(a){c=a},function(a){d=a}],execute:function(){a("MysqlDatasource",c.MysqlDatasource),a("Datasource",c.MysqlDatasource),a("QueryCtrl",d.MysqlQueryCtrl),e=function(){function a(){}return a.templateUrl="partials/config.html",a}(),a("ConfigCtrl",e),f="SELECT\n    UNIX_TIMESTAMP(<time_column>) as time_sec,\n    <title_column> as title,\n    <text_column> as text,\n    <tags_column> as tags\n  FROM <table name>\n  WHERE $__timeFilter(time_column)\n  ORDER BY <time_column> ASC\n  LIMIT 100\n  ",g=function(){function a(){this.annotation.rawQuery=this.annotation.rawQuery||f}return a.templateUrl="partials/annotations.editor.html",a}(),a("AnnotationsQueryCtrl",g)}}});
