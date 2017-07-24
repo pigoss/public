@@ -81,6 +81,8 @@
     width: 30px;
     position: relative;
     top: -1px;
+    /* 修改logo */
+    top: 4px;
   }
 
   .navbar-brand-btn-background {
@@ -91,6 +93,8 @@
     background: $iconContainerBackground;
     width: 40px;
     height: 40px;
+    /* 修改logo */
+    vertical-align: middle;
   }
 
   .icon-gf-grafana_wordmark {
